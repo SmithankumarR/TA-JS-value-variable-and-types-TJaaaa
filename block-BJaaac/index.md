@@ -2,7 +2,8 @@ writeCode
 
 ## JavaScript in HTML file
 
-1. Create a `html` file named `internal.html` in `code` folder
+1. Create a `html` file named `
+` in `code` folder
 2. Using script tag add JavaScript to your HTML file.
 3. Use `alert` command and show the message `Hello [Your Name]`
 
