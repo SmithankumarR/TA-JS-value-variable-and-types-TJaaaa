@@ -19,20 +19,15 @@ let userName = firstName + "" + lastName ;
 const FULL_NAME = userName ;
 alert (FULL_NAME);
 // Declare three variables `name,` `newUser` and `isAdmin`.
-let name= "";
-let newUser = "";
-const isAdmin = " altcampus";
+let name, newUser, isAdmin;
 // Assign your name as the value of `name`.
- name1 =" smithan";
- console.log(name1);
+ name = " smithan";
 // Assign the value of `name` to `newUser`.
-newUser = name1;
-console.log(newUser);
+newUser = name;
 // Set the value of `isAdmin` to `true`.
 isAdmin = true; 
-console.log(isAdmin);
 // Alert the values of all the three variables.
-alert (name1);
+alert (name);
 alert (newUser);
 alert (isAdmin);
 
