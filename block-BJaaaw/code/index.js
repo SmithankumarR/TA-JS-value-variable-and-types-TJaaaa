@@ -56,60 +56,59 @@ else {
 }
 
 // // 5. Convert the above code using`?` terniary operator
-house_Name == "stark" ? console.log("winter is coming"): console.log("All men must die");
-house_Name == "lannister" ? console.log(" A lannister always pays his debt") : console.log("All men must die");
+house_Name == "stark" ? console.log("winter is coming") : house_Name == "lannister" ? console.log(" A lannister always pays his debt") : console.log("All men must die");
 
 // Switch
- switch(true){
-   case 1 : (house_Name == "stark")
-   console.log("winter is coming");
-   break;
-   case 2 : (house_Name == " lannister")
-   console.log("A lannister always pays his debt");
-   default:
-  console.log("All men must die");
+switch (true) {
+  case 1: (house_Name == "stark")
+    console.log("winter is coming");
+    break;
+  case 2: (house_Name == " lannister")
+    console.log("A lannister always pays his debt");
+  default:
+    console.log("All men must die");
 
- }
+}
 
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
 let month = Number(prompt("enter the number of the month(1 - 12)"));
 switch (month) {
-  case 1: (1)
+  case 1:
     console.log("jan has 31 days");
     break;
-  case 2: (2)
+  case 2:
     console.log("feb has 28 days");
     break;
-  case 3: (3)
+  case 3:
     console.log("mar has 31 days");
     break;
-  case 4: (4)
+  case 4:
     console.log("apr has 30 days");
     break;
-  case 5: (5)
+  case 5:
     console.log("may has 31 days");
     break;
-  case 6: (6)
+  case 6:
     console.log("june has 30 days");
     break;
-  case 7: (7)
+  case 7:
     console.log("july has 31 days");
     break;
-  case 8: (8)
-    console.log("aug has 30 days");
+  case 8:
+    console.log("aug has 31 days");
     break;
-  case 9: (9)
-    console.log("sep has 31 days");
+  case 9:
+    console.log("sep has 30 days");
     break;
-  case 10: (10)
-    console.log("oct has 30 days");
+  case 10:
+    console.log("oct has 31 days");
     break;
-  case 11: (11)
-    console.log("nov has 31 days");
+  case 11:
+    console.log("nov has 30 days");
     break;
-  case 12: (12)
-    console.log("dec has 30 days");
+  case 12:
+    console.log("dec has 31 days");
   default:
     console.log("error enter again");
 
@@ -123,11 +122,22 @@ switch (month) {
 */
 
 let user_Salary = Number(prompt("enter your salary"));
-if (user_Salary <= 20000) {
-  let in_hand_Amount = (user_Salary - (` 10% / ${user_Salary}`));
-  alert(` ${in_hand_Amount}`);
+switch (true) {
+  case user_Salary <= 20000:
+    let inhand_Amount = (user_Salary * 10) / 100;
+    alert(`your in-hand-salary is ${inhand_Amount}`);
+    break;
+  case user_Salary <= 40000:
+    let inhand_Amount1 = (user_Salary * 20) / 100;
+    alert(`your in-hand-salary is ${inhand_Amount1}`);
+    break;
+  case user_Salary > 50000:
+    let inhand_Amount2 = (user_Salary * 30) / 100;
+    alert(`your in-hand-salary is ${inhand_Amount2}`);
+    break;
+  default:
+    alert(`not a valid code`);
 }
-
 //  if..else vs switch
 
 /* 8.
@@ -145,21 +155,44 @@ if (marks > 100) {
   alert`Marks can't be greater than 100`;
 }
 else if (marks > 80 && marks < 100) {
-  alert`Grade A`;
+  alert(`Grade A`);
+
 }
 else if (marks > 50 && marks < 80) {
-  alert`Grade B`;
+  alert(`Grade B`);
+
 }
 else if (marks > 30 && marks < 50) {
-  alert`Grade c`;
+  alert(`Grade C`);
+
 }
-else if (marks < 30) {
-  alert`Grade D`;
+else if (marks > 20) {
+  alert(`Grade D`);
+
 }
 else {
   alert`fail`;
 }
 
+switch (true) {
+  case marks > 100:
+    alert`Marks can't be greater than 100`;
+    break;
+  case (marks > 80 && marks < 100):
+    alert(`Grade A`);
+    break;
+  case marks > 50 && marks < 80:
+    alert(`Grade B`);
+    break;
+  case marks > 30 && marks < 50:
+    alert(`Grade c`);
+    break;
+  case marks > 20:
+    alert(`Grade d`);
+    break;
+  default:
+    alert(`fail`);
+}
 
 
 
