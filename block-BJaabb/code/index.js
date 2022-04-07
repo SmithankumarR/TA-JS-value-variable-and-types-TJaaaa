@@ -36,13 +36,24 @@ for(let j = 0; j <= 10; j=j+2) {
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
 for( let o = 9; o >= 1 ; o = o - 2) console.log(` ${o} odd number`);
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-let num = 5 ;
-while (num >= 0) {
-    console.log(` descending order  ${num}`);
-    num--;
+let firstValue ="";
+let lastValue = 5;
+while(lastValue >= 0){
+    firstValue += lastValue ;
+    lastValue--;
 }
+console.log(firstValue);
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
   
+let firstevenValue ="";
+let lastevenValue = 10;
+while(lastevenValue >= 0){
+    if(lastevenValue % 2 === 0) {
+        firstevenValue += lastevenValue ;
+    }
+    lastevenValue--;
+}
+console.log(firstValue);
 // Comparisoin
 
 /* 7. Take two value using prompt and store them in variables `num1` and `num2`. Check whether they are equal or not.
@@ -59,10 +70,9 @@ Example:
 */
 let num1 = Number(prompt("enter the value"));
 let num2 = Number(prompt("enter the value"));
-let concat = num1 === num2;
- alert(Boolean(concat));
-if(num1 || num2 == "true" + "null" + "undefined")
-{
+if(isNaN(num1) || isNaN(num2)) {
  alert(`enter a valid value`);
+} else {
+    alert(num1 === num2);
 }
 
