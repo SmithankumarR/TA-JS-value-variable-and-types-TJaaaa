@@ -32,8 +32,17 @@ n = 1 => output: hello
 n = 7 => output: heeeeeeello
 👇
 */
-let value = "hello";
+let count = +prompt("enter the number of e!");
+const start = "h";
+const end = "llo";
 
+let middle = "";
+
+for (let i = 0; i < count; i++) {
+  middle += "e";
+}
+
+alert(start + middle + end);
 // [Your code goes here]
 
 /*
@@ -42,7 +51,12 @@ Prompt user to enter n (using `prompt`) then based on input provided calculate a
 👇
 */
 // [Your code goes here]
-
+let max = +prompt("enter the value of n!");
+let sum = 0;
+for (let i = 1; i <= max; i++) {
+  sum += i;
+}
+alert(`the sum of the first n natural number is ${sum} `);
 /* Switch Statement
 
  🎖Using switch statement do the following
@@ -61,10 +75,34 @@ Take a number value from user and alert the message if it matches the conditions
 
 */
 // [Your code goes here]
-let number = prompt("enter the number in word format");
-switch (true) {
-  case (`${number} == "one || ONE || 1" `):
+let number = +prompt("enter the number btw 1-10");
+switch (number) {
+  case 1:
     alert(`ONE`);
+    break;
+  case 2:
+    alert(`TWO`);
+    break;
+  case 3:
+    alert(`THREE`);
+    break;
+  case 4:
+    alert(`FOUR`);
+    break;
+  case 5:
+    alert(`FIVE`);
+    break;
+  case 6:
+    alert(`SIX`);
+    break;
+  case 7:
+    alert(`SEVEN`);
+    break;
+  case 8:
+    alert(`EIGHT`);
+    break;
+  case 9:
+    alert(`NINE`);
     break;
   default:
     alert(`PLEASE TRY AGAIN`);
@@ -122,7 +160,7 @@ switch (true) {
 // [your code goes here]
 let numA = +prompt("enter the first number");
 let numB = +prompt("enter the second number");
-if(numA > numB ){
+if (numA > numB) {
   alert(`numA is largest`)
 } else {
   alert(`numB is largest`)
@@ -132,9 +170,19 @@ if(numA > numB ){
  Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
 // [Your code goes here]
+let num1 = +prompt("enter the first number");
+let num2 = +prompt("enter the second number");
+let num3 = +prompt("enter the thrid number");
 
+let product = num1 * num2 * num3 ;
+
+if(product > 0) {
+ alert(`the final value is positive(+)`);
+} else {
+  alert(` the final value is negative(-)`);
+}
 /* Calculator
- 🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement. 
+ 🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement.
  Use prompt to take the input from user i.e two numbers and an operation (Add, Sub, Mul, Div).
 
   ⛑ Rule
@@ -147,3 +195,23 @@ if(numA > numB ){
 */
 
 // [Your code goes here]
+let firstNumber = +prompt("enter the first number");
+let secondNumber = +prompt("enter the second number");
+let operation = prompt("enter the operation values ( add , sub , mul , div )");
+
+switch(operation) {
+  case `add`:
+    alert(`The sum of ${firstNumber} and ${secondNumber} is (${firstNumber} + ${secondNumber})`);
+    break;
+    case `sub`:
+    alert(`The sub of ${firstNumber} and ${secondNumber} is (${firstNumber} - ${secondNumber})`);
+    break;
+    case `mul`:
+    alert(`The sum of ${firstNumber} and ${secondNumber} is (${firstNumber} * ${secondNumber})`);
+    break;
+    case `div`:
+    alert(`The sum of ${firstNumber} and ${secondNumber} is (${firstNumber} / ${secondNumber})`);
+    break;
+    default:
+      alert(`enter the valid statement`);
+}
