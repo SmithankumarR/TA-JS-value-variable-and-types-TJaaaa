@@ -14,5 +14,12 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
-
+    for(let i = 99; i < bank_balance; i+=100) {
+      let current_balance =  bank_balance - PHONE_PRICE ;
+      if(PHONE_PRICE > current_balance) alert(`you run out of bank balance.`);
+    }
+    for(j=50; j < SPENDING_THRESHOLD; j+= 50) {
+        let accessories = SPENDING_THRESHOLD - ACCESSORY_PRICE ;
+        if( accessories > SPENDING_THRESHOLD) alert('no more amount');
+    }
 // ⛑ Answer of the above will `$334.76`.
