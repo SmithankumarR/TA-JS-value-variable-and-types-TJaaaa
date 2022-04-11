@@ -14,12 +14,21 @@ const ACCESSORY_PRICE = 9.99;
 var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
-    for(let i = 99; i < bank_balance; i+=100) {
-      let current_balance =  bank_balance - PHONE_PRICE ;
-      if(PHONE_PRICE > current_balance) alert(`you run out of bank balance.`);
+while(amount < bank_balance) {
+    amount += PHONE_PRICE ;
+    if(amount < SPENDING_THRESHOLD) {
+        amount += ACCESSORY_PRICE ;
     }
-    for(j=50; j < SPENDING_THRESHOLD; j+= 50) {
-        let accessories = SPENDING_THRESHOLD - ACCESSORY_PRICE ;
-        if( accessories > SPENDING_THRESHOLD) alert('no more amount');
-    }
+}
+let tax = amount * TAX_RATE ;
+let total_amount = amount + tax ;
+console.log(` ${total_amount}`);
+
+
+if( total_amount < bank_balance) {
+    console.log(`you can afford it`)
+} else {
+    console.log(`you can't afford it`)
+    
+}
 // ⛑ Answer of the above will `$334.76`.
